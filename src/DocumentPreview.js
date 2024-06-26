@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 
 function DocumentPreview() {
@@ -21,15 +21,15 @@ function DocumentPreview() {
                 setLoading(false);
             });
     }, [id]);
-
     if (loading) return <div>Loading...</div>;
     if (error) return <div>{error}</div>;
+    console.log(document?.configurations);
     return (
         <div className='document-preview-div'>
 
         <div className='document-preview'>
             <h1>{document.documentName}</h1>
-            {document.configurations.map(field => (
+            {document.configurations?.map(field => (
                 <div key={field.id}>
                     <label>{field.field_name}</label>
                     {field.field_type === 1 && <input type="text" />}
@@ -43,6 +43,7 @@ function DocumentPreview() {
                     {field.field_type === 3 && <input type="number" />}
                 </div>
             ))}
+            <Link to={'/'}>Back</Link>
         </div>
         </div>
 
