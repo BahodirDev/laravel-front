@@ -143,7 +143,7 @@
 
 
 
-.create{
+/* .create{
   width: 100%;
   height: 100vh;
   display: flex;
@@ -156,4 +156,69 @@
   display: flex;
   justify-content: center;
   align-items: center;
+} */
+
+.create {
+  width: 100%; /* Occupy full viewport width */
+  height: 100vh; /* Occupy full viewport height */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  background-color: #f5f5f5; /* Light background for subtle contrast */
 }
+
+.create-div {
+  min-width: 50%; /* Minimum width for the form container */
+  background-color: #fff; /* White background */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Delicate shadow */
+  border-radius: 8px; /* Softer, rounded corners */
+  padding: 25px; /* More generous padding for a spacious feel */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased spacing between child elements */
+}
+
+.create-div h1 {
+  text-align: center; /* Center the document title */
+  margin-bottom: 20px; /* Increased margin below the title */
+  font-size: 22px; /* Larger font size for prominence */
+  color: #333; /* Darker text for better legibility */
+}
+
+.create-div .field { /* Improved readability for field positioning */
+  display: grid; /* Use grid layout for better control */
+  grid-template-columns: 150px auto; /* Define column widths: 150px for label, remaining space for input */
+  align-items: center; /* Align label and input vertically */
+  gap: 10px; /* Spacing between label and input */
+}
+
+.create-div .field label {
+  font-weight: bold; /* Labels remain bold */
+  color: #666; /* Lighter text color for a softer feel */
+}
+
+.create-div .field select,
+.create-div .field input,
+.create-div .field textarea {
+  width: 100%; /* Set width for input elements */
+  padding: 7px; /* Increased padding for a more spacious feel */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 4px; /* Maintain rounded corners */
+  font-size: 16px; /* Slightly larger font size for clarity */
+}
+
+.create-div button {
+  padding: 10px 18px; /* Narrower button padding */
+  background-color: #e0f2f1; /* Light blue background */
+  color: #333; /* Darker text for buttons */
+  border: none;
+  border-radius: 5px; /* Slightly rounded corners for buttons */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.create-div button:hover {
+  background-color: #d0e6e5; /* Slightly darker blue on hover */
+}
+
+
