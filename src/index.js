@@ -12,7 +12,6 @@ ReactDOM.render(
             <Route path="/" element={<DocumentsTable />} />
             <Route path="/create" element={<CreateDocument />} />
             <Route path="/preview/:id" element={<DocumentPreview />}  />
-            <Route path="/ish" element={<h3>Salom</h3>} />
         </Routes>
     </Router>,
     document.getElementById('root')
